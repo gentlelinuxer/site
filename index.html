@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Real Linux | 리눅스 원리와 추적</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- <div class="py-2 bg-dark"> -->
+    <!-- 	<div class="container"> -->
+    <!-- 		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0"> -->
+    <!-- 	    		<div class="col-lg-12 d-block"> -->
+    <!-- 		    		<div class="row d-flex"> -->
+    <!-- 			    		<div class="col-md-5 pr-4 d-flex topper align-items-center"> -->
+    <!-- 			    			<div class="icon bg-fifth mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div> -->
+    <!-- 						    <span class="text">서울시 강남구 테헤란로 4길 38-5 ,4층</span> -->
+    <!-- 					    </div> -->
+    <!-- 					    <div class="col-md pr-4 d-flex topper align-items-center"> -->
+    <!-- 					    	<div class="icon bg-secondary mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div> -->
+    <!-- 						    <span class="text">help@reallinux.co.kr</span> -->
+    <!-- 					    </div> -->
+    <!-- 					    <div class="col-md pr-4 d-flex topper align-items-center"> -->
+    <!-- 					      <div class="icon bg-tertiary mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div> -->
+    <!-- 					      <span class="text">010-8694-1841</span> -->
+    <!-- 					    </div> -->
+    <!-- 				</div> -->
+    <!-- 			</div> -->
+    <!-- 		</div> -->
+    <!-- 	</div> -->
+    <!-- </div> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
+	    <div class="container d-flex align-items-center">
+	    	<a class="navbar-brand" href="index.html">REALLINUX</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item active"><a href="index.html" class="nav-link pl-0">강의</a></li>
+	        	<li class="nav-item"><a href="sw.html" class="nav-link">SW기본반</a></li>
+	        	<li class="nav-item"><a href="osa.html" class="nav-link">OS중급A</a></li>
+	        	<li class="nav-item"><a href="osb.html" class="nav-link">OS중급B</a></li>
+	        	<li class="nav-item"><a href="try.html" class="nav-link">Try 오컨</a></li>
+	        	<li class="nav-item"><a href="e.html" class="nav-link">온라인 강좌</a></li>
+	          <li class="nav-item"><a href="bs.html" class="nav-link">기업교육/자문</a></li>
+            <li class="nav-item"><a href="real.html" class="nav-link">소개</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+
+    <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image:url(images/sd/sd1.png);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-8 text-center ftco-animate">
+            <h1 class="mb-4" style="font-size:200%;">리눅스 기본동작원리의</br> 이해가 </br>문제해결의 시작이다.</h1>
+          </br>
+          <h2 class="mb-4"><h2 style=" font-size:150%; color:white">Low-level 개발자를 위한</h2>
+          <h3 class="mb-4" style=" font-size:150%; color:white">단계별 리눅스 강의 6월 행사중</h3>
+            <p><a href="sw.html" class="btn btn-secondary px-4 py-3 mt-3">더보기</a></p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image:url(images/sd/sd2.png);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-8 text-center ftco-animate">
+            <h1 class="mb-4"style=" font-size:200%;">최신 리눅스 커널&nbsp;<small style="font-size:60%;">v5.3<small>이상</small></small> </br>체계적으로 </br>분석 해보자</h1>
+            <h2 class="mb-4"><h2 style=" font-size:150%; color:white">원리부터 분석<small>(Tracing 실습)</small>까지</h2>
+            <h3 class="mb-4" style=" font-size:150%; color:white">지금 수강하세요</h3>
+            <p><a href="osa.html" class="btn btn-secondary px-4 py-3 mt-3">더 보기</a></p>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="slider-item" style="background-image:url(images/sd/sd3.png);">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-8 text-center ftco-animate">
+            <h1 class="mb-4"style=" font-size:200%;">최신 리눅스 커널 <span>8주 과정의 단계별로</span> <span>쉽고 빠르게 분석해보자</span></h1>
+            <h2 class="mb-4"><h2 style= "font-size:150%; color:white">소수정예 실습수업</h2>
+            <h3 class="mb-4" style= "font-size:150%; color:white">지금 수강하세요</h3>
+            <p><a href="osb.html" class="btn btn-secondary px-4 py-3 mt-3">더 보기</a></p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image:url(images/sd/sd4.jpeg);">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-right" data-scrollax-parent="true">
+          <div class="col-md-12 text-right ftco-animate" style=margin-top:10%>
+            <h1 class="mb-4 text-right" style="font-size:200%;">
+              우리 힘으로 오픈소스</br>참여하기</br>Try 오컨 모집</h1>
+            <h2 class="mb-4"><h2 style= "font-size:150%; color:white">Goodbye! Good First Issue.</h2>
+            <h3 class="mb-4" style= "font-size:150%; color:white">지금 수강하세요</h3>
+            <p><a href="try.html" class="btn btn-secondary px-4 py-3 mt-3">더 보기</a></p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="ftco-services ftco-no-pb">
+			<div class="container-wrap">
+				<div class="row no-gutters">
+          <div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-primary">
+            <div class="media block-6 d-block text-center">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-teacher"></span>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">Low-level개발자를 위한 SW 기본반</h3>
+                <p>os나 sw동작원리와 같은 기본기 수업을 압축적이고 실용적으로 공부하고자 하는 학생 및 개발자,
+                기본기를 단단하게 다시 제대로 쌓고자하는 분들을 위한 반</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-tertiary">
+            <div class="media block-6 d-block text-center">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-reading"></span>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">Low-level개발자를 위한 최신 리눅스 커널 분석A반</h3>
+                <p>리눅스 환경에서 연구하시거나 개발하시는분 어느정도 중급수준으로 다루고 계시지만
+                Tracing 실습을 통해서 분석능력을 기르고 리눅스 커널 내공을 쌓으려는 분들을 위한 반</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-fifth">
+            <div class="media block-6 d-block text-center">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-books"></span>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">Low-level개발자를 위한 최신 리눅스 커널 분석B반</h3>
+                <p>NETwork, irq와 BH(Bottom-Half),CFS scheduler,locking,signal, cgroup 등의 주제들을
+                중심으로 다루게 됩니다. 마지막 주차에는 간단하게 리눅스 커널 오픈소스에 코드기여(contribution)도 시도하는 시간을 작게나마 가집니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-quarternary">
+            <div class="media block-6 d-block text-center">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-diploma"></span>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">Try 오픈소스 컨트리뷰션</h3>
+                <p>오픈소스 협업개발 방식을 제대로 훈련하고 관심있어 기술분야에 맞춰서 팀원들과 함께 오픈소스를 분석하고 이해하고
+                기여(contribution)까지 해 볼 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+			</div>
+		</section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <h2 class="mb-4"><span>Reallnux</span> Classes</h2>
+            <p>수준별 다양한 수업과 소수의 수강생만 모집 강사와 1:1형 실습, 맞춤 리눅스 수업 지금 선택하세요. </p>
+          </div>
+        </div>
+        <div class="row">
+	  <!-- class 1 start -->
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="pricing-entry bg-light pb-4 text-center">
+                <img src="images/tt/ttsw.png" style="max-width: 80%; height: auto;">
+		<div class="px-1">
+		  <p>일정: 총 8 주 과정</p>
+                  <p>4월13일(월)~6월1일(월)</p>
+                  <p>매주 월요일 19:30~22:30(3시간)</p></br>
+                  <p>준비물: 개인노트북 필수</p>
+                  <p>(virtual box 리눅스 이미지 제공예정)</p>
+		</div>
+		<div style="padding:10px">
+                  <p>
+		    <span class="price">
+		      <g style="font-size:80%;">
+			<strike style="color:gray">60만원</strike>
+			&rarr; 48만원
+		      </g>
+		    </span>
+		  </p>
+                  <span class="price"><g style="color:red;">20% 할인 중</g></span>
+		</div>
+		<p class="button text-center">
+		  <a href="sw.html" class="btn btn-primary px-4 py-3">수강 신청하기</a>
+		</p>
+            </div>
+          </div>
+	  <!-- class 1 end -->
+
+
+	  <!-- class 2 start -->
+	  <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="pricing-entry bg-light pb-4 text-center">
+              <img src="images/tt/ttosa.png" style="max-width: 80%; height: auto;">
+	      <div class="px-1" style="padding:10px">
+		<p>일정: 총 8 주 과정</p>
+                <p>4월7일(화)~6월2일(화)</p>
+                <p>[5월 5일 휴강]</p>
+                <p>매주 화요일 19:30~22:30(3시간)</p></br>
+                <p>준비물: 개인노트북 필수</p>
+                <p>(virtual box 리눅스 이미지 제공예정)</p>
+              </div>
+	      <div style="padding:5px">
+		<p>
+		  <span class="price text-center">
+		    <g style="font-size:80%;">
+		      <strike style="color:gray">67만원</strike>
+		      &rarr; 53만원
+		    </g>
+		  </span>
+		</p>
+                <span class="price"><g style="color:red;">20% 할인 중</g></span>
+	      </div>
+	      <p class="button text-center">
+		<a href="osa.html" class="btn btn-primary px-4 py-3">수강 신청하기</a>
+	      </p>
+            </div>
+	  </div>
+	  <!-- class 2 end -->
+
+	  <!-- class 3 start -->
+	  <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="pricing-entry bg-light pb-4 text-center">
+	      <img src="images/tt/ttosb.png" style="max-width: 80%; height: auto;">
+              <div class="px-1" style="padding:10px">
+		<p>일정: 총 8 주 과정</p>
+                <p>4월8일(수)~6월3일(수)</p>
+                <p>[4월 15일 휴강]</p>
+                <p>매주 수요일 19:30~22:30(3시간)</p></br>
+                <p>준비물: 개인노트북 필수</p>
+                <p>(virtual box 리눅스 이미지 제공예정)</p>
+              </div>
+	      <div style="padding:5px">
+		<p>
+		  <span class="price text-center">
+		    <g style="font-size:80%;">
+		      <strike style="color:gray">67만원</strike>
+		      &rarr; 53만원
+		    </g>
+		  </span>
+		</p>
+                <span class="price"><g style="color:red;">20% 할인 중</g></span>
+	      </div>
+	      <p class="button text-center">
+		<a href="osb.html" class="btn btn-primary px-4 py-3">수강 신청하기</a>
+	      </p>
+            </div>
+	  </div>
+	  <!-- class 3 end -->
+
+	  <!-- class 4 start -->
+	  <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="pricing-entry bg-light pb-4 text-center">
+	      <img src="images/tt/tttry.png" style="max-width: 80%; height: auto;">
+	      <div class="px-1" style="padding:10px">
+		<p>일정: 총 8 주 과정</p>
+                <p>4월16일(목)~6월5일(금)</p>
+                <p>매주 목요일 19:30~21:30(2시간)</p>
+                <p>매주 금요일 19:30~21:30(2시간)</p>
+                <p>(4/30 석가탄신일 수업진행)</p></br>
+                <p>준비물: 개인노트북 필수</p>
+              </div>
+	      <div style="padding:5px">
+		<p>
+		  <span class="price text-center">
+		    <g style="font-size:80%;">
+		      <strike style="color:gray">70만원</strike>
+		      &rarr; 49만원
+		    </g>
+		  </span>
+		</p>
+                <span class="price"><g style="color:red;">30% 할인 중</g></span>
+	      </div>
+	      <p class="button text-center">
+		<a href="try.html" class="btn btn-quarternary px-4 py-3">수강 신청하기</a>
+	      </p>
+            </div>
+	  </div>
+	  <!-- class 4 end -->
+	 
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <h2 class="mb-4"><span>Reallinux</span> Teacher</h2>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5 col-lg-5 ftco-animate">
+            <div class="staff">
+              <div class="img-wrap d-flex align-items-stretch">
+                <div class="img align-self-stretch" style="background-image: url(images/lectures/bs.jpg);"></div>
+              </div>
+              <div class="text pt-3 text-center">
+                <h3>대표강사 송 태 웅</h3>
+                <span class="position mb-2">TAEUNG SONG</span>
+                <div class="faded">
+                  <ul class="ftco-social text-center">
+                    <li class="ftco-animate"><a href="http:facebook.com/reallinux.co.kr"><span class="icon-facebook"></span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ftco-section ftco-no-pt ftc-no-pb">
+            <div class="staff">
+              <div class="text text-left">
+                <div class="faded">
+                  <p><small>Linuxgeek inc.대표 / 리얼리눅스 강사</small></p>
+                    <p><small>KossLab 오픈소스 개발자 Linux Kernel, Tracing(BPF, uftrace 등)</p>
+                      <p><small>현대모비스 리눅스 커널특강 2019 "최신 리눅스 커널코드로 살펴보는 OS 동작과정의 이해와
+                                                            커널개발 참여 contribution"</small></p>
+                        <p><small>DIGIST 대구경북과학기술원 2019 커널특강 "리눅스 커널 v5.2 동작과정의 이해와 코드분석"</small></p>
+                          <p><small>USENIX, Vault'19 Speaker "Performance analysis in Linux storage stack with BPF"</small></p>
+                            <p><small>삼성전자 SOSCON 2018 "Linux Kernel BPF infrastructure in kernel"</small></p>
+                              <p><small>Linux Foundation, OSSEU17 Speaker "Goodbye! printf()" uftrace: Function Graph Tracer for C/C++"</small></p>
+                                <p><small>네이버 DEVIEW 2016 "Linux Kernel-perf: 라즈베리파이, 서버, IoT 성능 어디까지 쥐어짜봤니 ?"</small></p>
+                                  <p><small>카카오 클라우드팀, ETRI연구소, 서울대MASL 등 기술자문 "리눅스 커널, BPF"</small></p>
+                                  <p><small>서울대, 카이스트, 연세대, 고려대 등 10여개 대학 기술자문 및 강연</small></p>
+                                  <p><small>"오픈소스 개발방식" or "최신 리눅스커널(v5.2) 동작과정" 등</p>
+                                  <p>* 강연 및 자문 문의: taeung@reallinux.co.kr</P>
+                  <ul class="ftco-social text-center">
+                    <li class="ftco-animate"><a href="https://www.facebook.com/reallinux.co.kr"><span class="icon-facebook"></span></a></li>
+                    <li class="ftco-animate"><a href="https://www.facebook.com/reallinux.co.kr"><span class="icon-instagram"></span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+		<section class="ftco-intro" style="background-image: url(images/bs/bs2.png);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9">
+						<h2 style="font-size:200%;">외부강연과 기술자문을 진행하고 있습니다.
+              <br>(기업,대학,연구소 등)</h2>
+						<p class="mb-0"> 기업에 딱 맞는 직무역량 강화교육, reallinux를 통해 팀원의 직무 역량을 향상 시키세요.</p>
+					</div>
+					<div class="col-md-3 d-flex align-items-center">
+						<p class="mb-0"><a href="bs.html" class="btn btn-secondary px-4 py-3">더 자세히</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <h2 class="mb-4"><span>리얼리눅스</span>&nbsp;수강생 후기</h2>
+            <p><span style="font-size:20px">리얼리눅스 수강생들이 전하는 생생한 후기들</span></p>
+          </div>
+        </div>
+				<div class="row">
+					<div class="col-md-6 course d-lg-flex ftco-animate">
+						<div class="img" style="background-image: url(images/re/re1.png);"></div>
+						<div class="text bg-light p-4">
+							<h3><g style=color:#00CEFD>SW 기본반</g></h3>
+							<p class="subheading"><span style="font-size:20px">수강생 후기</span></p>
+							<p><span style="font-size:17px">대학교 수업에서는 암기식으로 공부해서 그런지 시간이 지나면 기억기 잘나지 않습니다. 그래서
+              수업을 듣게 되었고 reallinux에서 실습위주의 수업이 개념을 다시 잡는데 도움이 되었고
+               기억에도 잘 남을 것 같습니다.</span></p>
+						</div>
+					</div>
+					<div class="col-md-6 course d-lg-flex ftco-animate">
+						<div class="img" style="background-image: url(images/re/re1.png);"></div>
+						<div class="text bg-light p-4">
+								<h3><g style=color:#00CEFD>Try 오컨</h3>
+							<p class="subheading"><span style="font-size:20px">수강생 후기</span></p>
+							<p><span style="font-size:17px">소수정예라서 더 얻어 가는데 많았던것 같습니다. 오픈소스에 기여 할 수 있다는
+              자신가을 얻고 여러 경험을 해 보는 부분에서 많이 배워갑니다. 좋은 사람들을 만나서 많이 도움을
+            받아 해낼 수 있었던 점도 좋았습니다. 앞으로 배운걸 까먹지 않고 잘 활용 할 수 있도록
+          컨트리뷰톤을 이어서 진행하려고 합니다.</span></p>
+						</div>
+					</div>
+					<div class="col-md-6 course d-lg-flex ftco-animate">
+						<div class="img" style="background-image: url(images/re/re1.png);"></div>
+						<div class="text bg-light p-4">
+								<h3><g style=color:#00CEFD>OS중급A반</h3>
+							<p class="subheading"><span style="font-size:20px">수강생 후기</span></p>
+							<p><span style="font-size:20px">현업에서는 공부하기 힘든 부분에 대하여 공부하였으며 커널 뿐만 아닌 운영 시 실제 유용한 명령어에 대하여
+              알수 있어서 좋았습니다. 커널 또한 전체적으로 그림이 보이니
+               Top Down으로 진행하는 좋은 수업이었습니다.</span></p>
+						</div>
+					</div>
+					<div class="col-md-6 course d-lg-flex ftco-animate">
+						<div class="img" style="background-image: url(images/re/re1.png);"></div>
+						<div class="text bg-light p-4">
+								<h3><g style=color:#00CEFD>OS중급B반</h3>
+							<p class="subheading"><span style="font-size:20px">수강생 후기</span></p>
+							<p><span style="font-size:20px">평소에 책으로 개념만 공부한 리눅스를 실제 코드로 보면서 어떻게 동작하는지 알고 싶었습니다. 시중에 책도
+              없고 강의도 없어서 언젠가는 이런 강의가 나오겠지 했는데 듣게 되어서
+               다행이라고 생각합니다.</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/sd/sd5.png);" data-stellar-background-ratio="0.5">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section heading-section-black ftco-animate">
+            <h2 class="mb-4"><span style= color:white>리눅스는</span>&nbsp;<span style="color:white">리얼리눅스에서 시작하자</span></h2>
+            <p><span style="font-size:30px"><span style= color:white>리얼리눅스 수강생들의 또 한번의 선택</span></p>
+          </div>
+        </div>
+    		<div class="row d-md-flex align-items-center justify-content-center">
+    			<div class="col-lg-10">
+    				<div class="row d-md-flex align-items-center">
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><span class="flaticon-doctor"></span></div>
+		              <div class="text">
+		                <strong class="number" data-number="97">0</strong>
+		                <span style= color:white>수업 만족도</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><span class="flaticon-doctor"></span></div>
+		              <div class="text">
+		                <strong class="number" data-number="95">0</strong>
+		                <span style= color:white>직무역량</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><span class="flaticon-doctor"></span></div>
+		              <div class="text">
+		                <strong class="number" data-number="98">0</strong>
+		              <span style= color:white>커리큘럼</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><span class="flaticon-doctor"></span></div>
+		              <div class="text">
+		                <strong class="number" data-number="95">0</strong>
+		               <span style= color:white>자기개발</span>
+		              </div>
+		            </div>
+		          </div>
+	          </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section testimony-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <h2 class="mb-4"><span>리얼리눅스</span> 후기</h2>
+            <p><span style="font-size:25px">리얼리눅스 수강생들의 이야기</span></p>
+          </div>
+        </div>
+        <div class="row ftco-animate justify-content-center">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel">
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/re/re1.png)">
+                  </div>
+                  <div class="text ml-2 bg-light">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>일주일에 1번 수업이 직장인 입장에서 부담없고 충분히 공부할 시간도 확보 할 수 있어서
+                    좋았다. 판서와 이론 & 실제 코드로 확인하는 과정도 매우 좋았다.</p>
+                  <p class="position">reallinux 수강생</p>
+
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/re/re1.png)">
+                  </div>
+                  <div class="text ml-2 bg-light">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>contribution에 필요한 git 명령어를 실습을 통해 확실히 익힐 수 있었고,
+                    단계별로 contribution하는 방법을 배 울 수 있었다. 수업이 끝나더라고
+                  혼자서 관심있는 프로젝트에 contribution 할 수 있을 것 같다. </p>
+                    <p class="position">reallinux 수강생</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/re/re1.png)">
+                  </div>
+                  <div class="text ml-2 bg-light">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>전반적으로 좋았습니다. 스스로 과제를 부여하고 진행하는 과정이 익수치
+                    않아서 적응하는데는 시간이 필요했습니다만, 개발자로써는 필요한 능력을 기를수 있었던 과정이라 생각합니다.</p>
+                    <p class="position">reallinux 수강생</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/re/re1.png)">
+                  </div>
+                  <div class="text ml-2 bg-light">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>머리 속에 개념만으로만 남아있던 부분들을 다시
+                    배우고 실습을 통해서 더욱 깊이 이해할수 있었습니다. 기본을 다지기에 좋은 만족스러운 강의였습니다.</p>
+                    <p class="position">reallinux 수강생</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/re/re1.png)">
+                  </div>
+                  <div class="text ml-2 bg-light">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>소스코드만 읽는 방식이 책으로 공부할 때는 와 닿지 않는 부분이 있었는데 트레이싱을 이용해
+                    분석을 하니 이해하기 한결 수월했습니다.</p>
+                    <p class="position">reallinux 수강생</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb"
+     style="background-image: url(images/sd/sd6.jpg);" data-stellar-background-ratio="0.5">
+      <div class="container">
+    	<div class="row justify-content-end">
+    	  <div class="col-md-6 py-2 px-md-5 bg-primary">
+	    <div class="heading-section heading-section-white ftco-animate mb-5">
+	      <h2 class="mb-4">리얼리눅스에<br> 문의하기 (Q&A)</br></h2>
+	      <p><span style="font-size:20px">* 카카오톡 채널 - "리얼리눅스"</span></p>
+              <p><span style="font-size:20px">* 리얼리눅스 메일 - help@reallinux.co.kr</span></p>
+	    </div>
+	    <p class="mb-0"><a href="http://pf.kakao.com/_sxevPT" class="btn btn-secondary px-4 py-3">카카오 상담</a></p>
+	    <div class="form-group ml-md-4">
+	    </div>
+	  </div>
+	</div>
+      </div>
+    </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+	<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <h2 class="mb-4"><span>리얼리눅스</span> 오시는 길</h2>
+            <p><span style="font-size:20px">서울시 강남구 테헤란로 4길 38-5 혜정빌딩 4층</span></p>
+          </div>
+        </div>
+          <div class="container">
+            <div class="section-intro text-center">
+              <p style="margin-left:auto; margin-right:auto;max-width:560px">
+		<a style="font-size:25px" href="https://docs.google.com/presentation/d/1N0z20JnuZ5aQgItfiUaoj9RPXU33eq4A7M2YMfdm_y0/edit?usp=sharing" target="_blank">길찾기 설명 PPT</a></br>
+              </p>
+              <table style="margin-left: auto; margin-right: auto;" cellpadding="0" cellspacing="0" width="536"> <tr> <td style="border:1px solid #cecece;"><a href="https://map.naver.com/?searchCoord=49b7e6c4735a90a0e7b8ef9333ce2b9f5eaf5064985bc227bc1e5aeabb07b51a&query=66as7Ja866as64iF7Iqk&tab=1&lng=ff181b7e72d023ea97d7f13e027fab86&mapMode=0&mpx=d40586092db4e284b0d6fc1933e3d60cf3842eb7a2dca2cf7d72fcdacb58b6ad56927141c595908d224c84095ca0b0ccfd3ed1d1b9135c9253b0f55ca5c14f98&lat=cc4aa99b23d06c1551290a4bf3150a42&dlevel=12&enc=b64&menu=location" target="_blank"><img src="http://prt.map.naver.com/mashupmap/print?key=p1564425290260_-1586683263" width="534" height="418" alt="지도 크게 보기" title="지도 크게 보기" border="0" style="vertical-align:top;"/></a></td> </tr> <tr> <td> <table cellpadding="0" cellspacing="0" width="100%"> <tr> <td height="30" bgcolor="#f9f9f9" align="left" style="padding-left:9px; border-left:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="font-family: tahoma; font-size: 11px; color:#666;">2019.7.30</span>&nbsp;<span style="font-size: 11px; color:#e5e5e5;">|</span>&nbsp;<a style="font-family: dotum,sans-serif; font-size: 11px; color:#666; text-decoration: none; letter-spacing: -1px;" href="https://map.naver.com/?searchCoord=49b7e6c4735a90a0e7b8ef9333ce2b9f5eaf5064985bc227bc1e5aeabb07b51a&query=66as7Ja866as64iF7Iqk&tab=1&lng=ff181b7e72d023ea97d7f13e027fab86&mapMode=0&mpx=d40586092db4e284b0d6fc1933e3d60cf3842eb7a2dca2cf7d72fcdacb58b6ad56927141c595908d224c84095ca0b0ccfd3ed1d1b9135c9253b0f55ca5c14f98&lat=cc4aa99b23d06c1551290a4bf3150a42&dlevel=12&enc=b64&menu=location" target="_blank">지도 크게 보기</a> </td> <td width="98" bgcolor="#f9f9f9" align="right" style="text-align:right; padding-right:9px; border-right:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="float:right;"><span style="font-size:9px; font-family:Verdana, sans-serif; color:#444;">&copy;&nbsp;</span>&nbsp;<a style="font-family:tahoma; font-size:9px; font-weight:bold; color:#2db400; text-decoration:none;" href="http://www.nhncorp.com" target="_blank">NAVER Corp.</a></span> </td> </tr> </table> </td> </tr> </table>
+            </div>
+          </div>
+      </div>  
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Reallnux</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text"> 서울시 강남구 테헤란로4길 38-5 혜정빌딩 4층</span></li>
+	                <li><span class="icon icon-phone"></span><span class="text">010-8694-1841</span></a></li>
+	                <li><a href="help@reallinux.co.kr"><span class="icon icon-envelope"></span><span class="text">help@reallinux.co.kr</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+              <h2 class="ftco-heading-2">Real Linux</h2>
+              <p>
+  	      리얼리눅스</br>
+  	      설립/운영: <a href="https://linuxgeek.io" target="_blank">(주) 리눅스긱</a>
+  </br>
+  	      학원설립 운영등록번호:</br>
+  	      제 13003호 리얼리눅스 학원</br>
+  	      <a href="img/home/리얼리눅스_학원설립운영등록증.png" target="_blank">정보조회</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+              <h2 class="ftco-heading-2">contact</h2>
+              <p>
+  	      [사전수강신청예약/오프라인 상담예약/개발자 스터디모임 인증,예약 문의]</br>
+  	      이메일: <a href="mailto:help@reallinux.co.kr">help@reallinux.co.kr</a></br>
+  	      전화번호: 070-4304-2025</br></br>
+  	      [수업내용문의 및 수강레벨상담]</br>
+  	      카톡 플러스친구: <a href="http://pf.kakao.com/_sxevPT">리얼리눅스</a></br></br>
+  	      강의장: 서울시 강남구 테헤란로4길 38-5 혜정빌딩 4F
+  	      <a href="https://docs.google.com/presentation/d/1N0z20JnuZ5aQgItfiUaoj9RPXU33eq4A7M2YMfdm_y0/edit?usp=sharing" target="_blank" >길찾기 안내</a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row align-items-center">
+            <p class="col-lg-8 col-sm-12 footer-text m-0 text-center text-lg-left">
+
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+            <div class="col-lg-4 col-sm-12 footer-social text-center text-lg-right">
+  	    <a href="https://www.facebook.com/reallinux.co.kr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.youtube.com/channel/UC5nTtNnmhAm_pHeADNqfw4Q" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+  </body>
+</html>
+
