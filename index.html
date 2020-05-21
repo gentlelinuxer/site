@@ -160,7 +160,7 @@
             		<span class="flaticon-teacher"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">왕초보를 위한 리눅스 커멘드라인 기초반</h3>
+                <h3 class="heading">왕초보를 위한 리눅스 커맨드라인 완전정복</h3>
                 <p>리눅스의 구조와 기초 명령어들을 </br>완전 정복하고 실습을 통한</br>
                   웹서버 구축,도커와 컨테이를 사용함 으로써 리눅스에 입문하고자 하는 반</p>
               </div>
@@ -173,8 +173,8 @@
               </div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">"리눅스는 어떻게 동작할까?" SW 기본반</h3>
-                <p>os나 sw동작원리와 같은 기본기 수업을 압축적이고 실용적으로 공부하고자 하는 학생 및 개발자,
-                기본기를 단단하게 다시 제대로 쌓고자하는 분들을 위한 반
+                <p>리눅스 OS 와 SW 동작원리 (예: mysql, nginx 등) 를 이해하고
+		  제대로된 기본기를 토대로 개발역량 / 문제해결 역량을 기르고자하는반
                 </p>
               </div>
             </div>
@@ -185,12 +185,9 @@
             		<span class="flaticon-books"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">리눅스 OS 중급A반</h3>
-                <p>리눅스 환경에서 연구하시거나 개발하시는분 어느정도 중급수준으로 다루고 계시지만
-                Tracing 실습을 통해서 분석능력을 기르고 리눅스 커널 내공을 쌓으려는 분들을 위한 반</p>
-                <h3 class="heading">리눅스 OS 중급B반</h3>
-                <p>NETwork, irq와 BH(Bottom-Half),CFS scheduler,locking,signal, cgroup 등의 주제들을
-                중심으로 다루게 됩니다. 마지막 주차에는 간단하게 리눅스 커널 오픈소스에 코드기여(contribution)도 시도하는 시간을 작게나마 가집니다.</p>
+                <h3 class="heading">리눅스 OS 중급A/B반</h3>
+                <p>최신 리눅스 메모리, 파일 I/O, 네트워크 I/O, 스케줄러 등을 심층분석하고
+		Low-level 문제해결능력과 응용력을 기르고자 하는반</p>
               </div>
             </div>
           </div>
@@ -201,14 +198,13 @@
               </div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">Try 오픈소스 컨트리뷰션</h3>
-                <p>오픈소스 협업개발 방식을 제대로 훈련하고 관심있어 기술분야에 맞춰서 팀원들과 함께 오픈소스를 분석하고 이해하고
-                기여(contribution)까지 해 볼 수 있습니다.</p>
+                <p>"Goodbye! Good First Issue" 초보자용 이슈에서 벗어나
+		  지속가능한 진짜 컨트리뷰터가 되고자하는 반</p>
               </div>
             </div>
           </div>
         </div>
-			</div>
-		</section>
+    </section>
 
     <section class="ftco-section">
       <div class="container">
@@ -785,5 +781,27 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC4XVuahMxnyQvtHAJG8Ifvah5MHNN30jA",
+    authDomain: "reallinux-a3d7e.firebaseapp.com",
+    databaseURL: "https://reallinux-a3d7e.firebaseio.com",
+    projectId: "reallinux-a3d7e",
+    storageBucket: "reallinux-a3d7e.appspot.com",
+    messagingSenderId: "1006031231803",
+    appId: "1:1006031231803:web:cc1ebe74dc2b7d5ffa751e",
+    measurementId: "G-8B86GE16JN"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
   </body>
 </html>
